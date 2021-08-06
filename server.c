@@ -10,11 +10,21 @@ void ft_decrypt(int i, siginfo_t *info, void *context)
 	count++;
 	if (count == 8)
 	{
+		//ft_putnbr_fd(byte, 1);
 		if (byte == 0)
+		{
 			kill(info->si_pid, SIGUSR1);
-		ft_putchar_fd(byte, 1);
-		count = 0;
-		byte = 0;
+			usleep(300);
+			count = 0;
+		}
+		else
+		{
+			kill(info->si_pid, SIGUSR2);
+			usleep(300);
+			ft_putchar_fd(byte, 1);
+			count = 0;
+			byte = 0;
+		}
 	}
 }
 
