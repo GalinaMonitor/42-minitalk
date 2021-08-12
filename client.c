@@ -1,3 +1,13 @@
+/*
+**@file					client.c
+**@author				Gmonitor (gmonitor@student.21-school.ru)
+**@date					2021-08-07
+**
+**@brief				Function crypts char to binary code and sends it **						by (SIGUSR1, SIGUSR2)
+**
+**@used_functions		{none}
+*/
+
 #include "minitalk.h"
 
 int ack_g = 0;
@@ -16,7 +26,7 @@ int ft_crypt_bit(int byte, int pid)
 			if (kill(pid, SIGUSR2) != 0)
 				return (WRONG_PID);
 		count++;
-		usleep(100);
+		usleep(500);
 	}
 	return (SUCCESS);
 }

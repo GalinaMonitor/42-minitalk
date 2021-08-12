@@ -1,11 +1,10 @@
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef MINITALK_H
+# define MINITALK_H
 
 # include <stdio.h>
 # include <stdlib.h>
 # include <signal.h>
 # include <unistd.h>
-# include "libft/libft.h"
 # include "libft/libft.h"
 
 # define SUCCESS 0

@@ -1,3 +1,14 @@
+/*
+**@file					server.c
+**@author				Gmonitor (gmonitor@student.21-school.ru)
+**@date					2021-08-07
+**
+**@brief				Function receives signals from function-server	**						(SIGUSR1, SIGUSR2) and decrypt them to char.
+**						When connection started/ended and after every 	**						decrypted char func sends ack signal.
+**
+**@used_functions		ft_decrypt, kill, ft_putchar_fd, ft_putnbr_fd, 	**						ft_putstr_fd, sig*, pause
+*/
+
 #include "minitalk.h"
 
 void ft_decrypt(int i, siginfo_t *info, void *context)

@@ -16,11 +16,11 @@ SOURCES_LIBFT = $(addprefix $(DIR_LIBFT), $(LIBFT))
 
 all: $(NAME_SERVER) $(NAME_CLIENT)
 
-$(NAME_SERVER): $(MINITALK_SERVER) $(LIBFT)
+$(NAME_SERVER): $(LIBFT) $(MINITALK_SERVER)
 	@$(CC) $(FLAGS) $(MINITALK_SERVER) $(LIBFT) -o $(NAME_SERVER)
 	@echo "server is ready to use"
 
-$(NAME_CLIENT): $(MINITALK_CLIENT) $(LIBFT)
+$(NAME_CLIENT): $(LIBFT) $(MINITALK_CLIENT)
 	@$(CC) $(FLAGS) $(MINITALK_CLIENT) $(LIBFT) -o $(NAME_CLIENT)
 	@echo "client is ready to use"
 
