@@ -21,3 +21,5 @@ There are additional commands for make
 
 	make clean // clean all .o and .d files in ./libft
 	make fclean // clean server, client, libft.a, all .o and .d files
+
+![Screenshot_2021-08-17_19-21-20](https://user-images.githubusercontent.com/82672680/129813098-0d4480c2-97c4-40be-ab7a-55df6dcf7c46.png)
