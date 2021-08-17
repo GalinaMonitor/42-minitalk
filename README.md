@@ -3,7 +3,8 @@
 ## Making a server and client programmes
 Made a connection between server and client using signal.h. Works with multiple clients. Client sends strings and supports ack.
 
-[libft_subject.pdf](https://github.com/GalinaMonitor/libft/files/6797738/libft_subject.pdf)
+[minitalk_subject.pdf](https://github.com/GalinaMonitor/minitalk/files/7003485/minitalk_subject.pdf)
+
 
 ## Usage:
 How to make server and client
