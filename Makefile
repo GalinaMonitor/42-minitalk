@@ -4,8 +4,8 @@ CC = gcc
 
 # FLAGS = -Wall -Werror -Wextra
 
-DIR_LIBFT = libft/
-LIBFT = libft/libft.a
+DIR_LIBFT = libft/libft/libft/
+LIBFT = libft/libft/libft/libft.a
 
 HEADER = minitalk.h
 
@@ -31,8 +31,10 @@ bonus: all
 	@echo "minitalk with bonuses is ready to use"
 
 fclean:
+	$(MAKE) fclean -C $(DIR_LIBFT)
 	@rm -f $(NAME_SERVER) $(NAME_CLIENT)
 
 re: fclean all
+
 
 .PHONY : all re fclean bonus

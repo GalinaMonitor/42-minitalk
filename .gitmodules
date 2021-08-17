@@ -1,0 +1,3 @@
+[submodule "libft/libft"]
+	path = libft/libft
+	url = https://github.com/GalinaMonitor/libft.git
