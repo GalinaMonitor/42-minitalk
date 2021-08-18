@@ -5,7 +5,7 @@
 # include <stdlib.h>
 # include <signal.h>
 # include <unistd.h>
-# include "libft/libft/libft/libft.h"
+# include "libft/libft/libft.h"
 
 # define SUCCESS 0
 # define WRONG_INPUT -1

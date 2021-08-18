@@ -4,8 +4,8 @@ CC = gcc
 
 # FLAGS = -Wall -Werror -Wextra
 
-DIR_LIBFT = libft/libft/libft/
-LIBFT = libft/libft/libft/libft.a
+DIR_LIBFT = libft/libft/
+LIBFT = libft/libft/libft.a
 
 HEADER = minitalk.h
 
