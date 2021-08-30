@@ -27,7 +27,7 @@ int ft_crypt_bit(int byte, int pid)
 			if (kill(pid, SIGUSR2) != 0)
 				return (WRONG_PID);
 		count++;
-		usleep(190);
+		usleep(175);
 	}
 	return (SUCCESS);
 }
@@ -87,12 +87,12 @@ int main(int argc, char **argv)
 	error = 0;
 	ind_letter = 0;
 	ft_set_handler(&ack);
-	pid = get_pid(argv[1]);
-	if (argc != 3 || pid < 0)
+	if (argc != 3 || get_pid(argv[1]) < 0)
 	{
 		write(1, "Wrong input", 11);
 		return (WRONG_INPUT);
 	}
+	pid = get_pid(argv[1]);
 	error = ft_crypt_letter_resend(0, pid);
 	while (argv[2][ind_letter] != '\0' && ack_g == 1)
 	{

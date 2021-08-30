@@ -29,7 +29,3 @@ time ./client $pid "$text" > tests/traces
 echo Sending 10000s
 text=`cat ./tests/10000s`
 time ./client $pid "$text" > tests/traces
-
-echo Sending 30000s
-text=`cat ./tests/30000s`
-time ./client $pid "$text" > tests/traces
