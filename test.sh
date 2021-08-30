@@ -1,5 +1,7 @@
 #!/bin/bash
 
+rm tests/traces
+touch tests/traces
 pid=$1
 emptyStr=""
 if [ "$pid" = "$emptyStr" ]

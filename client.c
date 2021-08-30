@@ -15,6 +15,7 @@ int ack_g = 0;
 int ft_crypt_bit(int byte, int pid)
 {
 	int count = 0;
+
 	while(count <= 7)
 	{
 		if (byte >> count & 1)
@@ -26,7 +27,7 @@ int ft_crypt_bit(int byte, int pid)
 			if (kill(pid, SIGUSR2) != 0)
 				return (WRONG_PID);
 		count++;
-		usleep(150);
+		usleep(190);
 	}
 	return (SUCCESS);
 }
