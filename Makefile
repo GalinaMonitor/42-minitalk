@@ -9,7 +9,7 @@ LIBFT = libft/libft/libft.a
 
 HEADER = minitalk.h
 
-MINITALK_CLIENT = client.c
+MINITALK_CLIENT = client.c service.c
 MINITALK_SERVER = server.c
 
 SOURCES_LIBFT = $(addprefix $(DIR_LIBFT), $(LIBFT))

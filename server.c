@@ -40,7 +40,7 @@ void ft_decrypt(int i, siginfo_t *info, void *context)
 int main()
 {
 	struct sigaction decrypt;
-	decrypt.sa_flags = SA_RESTART;
+	// decrypt.sa_flags = SA_RESTART;
 	decrypt.sa_flags = SA_SIGINFO;
 
 	decrypt.sa_sigaction = ft_decrypt;

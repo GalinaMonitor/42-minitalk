@@ -26,7 +26,7 @@ int ft_crypt_bit(int byte, int pid)
 			if (kill(pid, SIGUSR2) != 0)
 				return (WRONG_PID);
 		count++;
-		usleep(500);
+		usleep(150);
 	}
 	return (SUCCESS);
 }
@@ -35,13 +35,8 @@ void	ft_talkback(int sig)
 {
 	if (sig == SIGUSR2 && ack_g == -1)
 	{
-		write(1, "Connection started\n", 19);
+		write(1, "Connection started/closed\n", 26);
 		ack_g = 1;
-	}
-	else if (sig == SIGUSR2 && ack_g == -1)
-	{
-		write(1, "Connection closed\n", 18);
-		ack_g = 0;
 	}
 	if (sig == SIGUSR1 && ack_g == -1)
 	{
@@ -91,8 +86,8 @@ int main(int argc, char **argv)
 	error = 0;
 	ind_letter = 0;
 	ft_set_handler(&ack);
-	pid = ft_atoi(argv[1]);
-	if (argc != 3)
+	pid = get_pid(argv[1]);
+	if (argc != 3 || pid < 0)
 	{
 		write(1, "Wrong input", 11);
 		return (WRONG_INPUT);

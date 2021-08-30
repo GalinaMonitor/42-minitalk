@@ -16,5 +16,6 @@ void	ft_decrypt(int i, siginfo_t *info, void *context);
 int		ft_crypt_bit(int byte, int pid);
 void	ft_talkback(int sig);
 int		ft_crypt_letter_resend(int byte, int pid);
+int		get_pid(char *pid);
 
 #endif
